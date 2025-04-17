@@ -46,6 +46,7 @@ import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_7_2;
 import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_8;
 import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_9;
 import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_1_9_4;
+import static com.velocitypowered.api.network.ProtocolVersion.MINECRAFT_25w14CRAFTMINE;
 import static com.velocitypowered.api.network.ProtocolVersion.MINIMUM_VERSION;
 import static com.velocitypowered.api.network.ProtocolVersion.SUPPORTED_VERSIONS;
 import static com.velocitypowered.proxy.protocol.ProtocolUtils.Direction;
@@ -335,6 +336,8 @@ public enum StateRegistry {
           ServerboundCookieResponsePacket.class, ServerboundCookieResponsePacket::new,
           map(0x11, MINECRAFT_1_20_5, false),
           map(0x13, MINECRAFT_1_21_2, false),
+          map(0x14, MINECRAFT_25w14CRAFTMINE, false),
+          map(0x13, MINECRAFT_1_21_2, false),
           map(0x14, MINECRAFT_1_21_6, false));
       serverbound.register(
           PluginMessagePacket.class,
@@ -353,6 +356,8 @@ public enum StateRegistry {
           map(0x0F, MINECRAFT_1_20_2, false),
           map(0x10, MINECRAFT_1_20_3, false),
           map(0x12, MINECRAFT_1_20_5, false),
+          map(0x14, MINECRAFT_1_21_2, false),
+          map(0x15, MINECRAFT_25w14CRAFTMINE, false),
           map(0x14, MINECRAFT_1_21_2, false),
           map(0x15, MINECRAFT_1_21_6, false));
       serverbound.register(
@@ -624,6 +629,8 @@ public enum StateRegistry {
           map(0x6D, MINECRAFT_1_20_5, true),
           map(0x74, MINECRAFT_1_21_2, true),
           map(0x73, MINECRAFT_1_21_5, true),
+          map(0x76, MINECRAFT_25w14CRAFTMINE, true),
+          map(0x73, MINECRAFT_1_21_5, true),
           map(0x78, MINECRAFT_1_21_9, true));
       clientbound.register(
           LegacyTitlePacket.class,
@@ -736,6 +743,8 @@ public enum StateRegistry {
           map(0x6B, MINECRAFT_1_20_5, false),
           map(0x72, MINECRAFT_1_21_2, false),
           map(0x71, MINECRAFT_1_21_5, false),
+          map(0x73, MINECRAFT_25w14CRAFTMINE, false),
+          map(0x71, MINECRAFT_1_21_5, false),
           map(0x76, MINECRAFT_1_21_9, false));
       clientbound.register(
           SystemChatPacket.class,
@@ -748,6 +757,8 @@ public enum StateRegistry {
           map(0x69, MINECRAFT_1_20_3, true),
           map(0x6C, MINECRAFT_1_20_5, true),
           map(0x73, MINECRAFT_1_21_2, true),
+          map(0x72, MINECRAFT_1_21_5, true),
+          map(0x75, MINECRAFT_25w14CRAFTMINE, true),
           map(0x72, MINECRAFT_1_21_5, true),
           map(0x77, MINECRAFT_1_21_9, true));
       clientbound.register(
@@ -790,11 +801,15 @@ public enum StateRegistry {
           TransferPacket::new,
           map(0x73, MINECRAFT_1_20_5, false),
           map(0x7A, MINECRAFT_1_21_2, false),
+          map(0x7D, MINECRAFT_25w14CRAFTMINE, false),
+          map(0x7A, MINECRAFT_1_21_2, false),
           map(0x7F, MINECRAFT_1_21_9, false));
       clientbound.register(
           ClientboundCustomReportDetailsPacket.class,
           ClientboundCustomReportDetailsPacket::new,
           map(0x7A, MINECRAFT_1_21, false),
+          map(0x81, MINECRAFT_1_21_2, false),
+          map(0x85, MINECRAFT_25w14CRAFTMINE, false),
           map(0x81, MINECRAFT_1_21_2, false),
           map(0x86, MINECRAFT_1_21_9, false));
       clientbound.register(
@@ -822,7 +837,6 @@ public enum StateRegistry {
       serverbound.register(
           ServerboundCookieResponsePacket.class, ServerboundCookieResponsePacket::new,
           map(0x04, MINECRAFT_1_20_5, false));
-
       clientbound.register(
           DisconnectPacket.class, () -> new DisconnectPacket(this),
           map(0x00, MINECRAFT_1_7_2, false));
