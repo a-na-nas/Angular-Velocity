@@ -1,9 +1,9 @@
 # Snapshot-patched Velocity
 
 Fork of Velocity with added 25w14craftmine April Fools snapshot support.
-This patched version does not provide any conversion for connections
+This patched version does not provide any packet conversion for connections
 (for that please take a look at [ViaAprilFools](https://hangar.papermc.io/ViaVersion/ViaAprilFools) -
-a Velocity plugin for handling notable snapshot connections), but it allows
+a ViaVersion extension for handling notable snapshot versions), but it allows
 connections between 25w14craftmine clients and servers within your network.
 
 ## Velocity
