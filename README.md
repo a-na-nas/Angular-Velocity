@@ -1,7 +1,12 @@
-# Velocity
+# Snapshot-patched Velocity
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/PaperMC/Velocity/gradle.yml)](https://papermc.io/downloads/velocity)
-[![Join our Discord](https://img.shields.io/discord/289587909051416579.svg?logo=discord&label=)](https://discord.gg/papermc)
+Fork of Velocity with added 25w14craftmine April Fools snapshot support.
+This patched version does not provide any conversion for connections
+(for that please take a look at [ViaAprilFools](https://hangar.papermc.io/ViaVersion/ViaAprilFools) -
+a Velocity plugin for handling notable snapshot connections), but it allows
+connections between 25w14craftmine clients and servers within your network.
+
+## Velocity
 
 A Minecraft server proxy with unparalleled server support, scalability,
 and flexibility.
@@ -32,5 +37,4 @@ Once you've built Velocity, you can copy and run the `-all` JAR from
 `proxy/build/libs`. Velocity will generate a default configuration file
 and you can configure it from there.
 
-Alternatively, you can get the proxy JAR from the [downloads](https://papermc.io/downloads/velocity)
-page.
+Alternatively, you can get the proxy JAR from the releases page.
