@@ -53,6 +53,9 @@ public class JoinGamePacket implements MinecraftPacket {
   private int portalCooldown; // 1.20+
   private int seaLevel; // 1.21.2+
   private boolean enforcesSecureChat; // 1.20.5+
+  private boolean isMap;
+  private int[] unlockedEffects;
+  private int[] activeEffects;
 
   public int getEntityId() {
     return entityId;
@@ -358,6 +361,13 @@ public class JoinGamePacket implements MinecraftPacket {
       this.seaLevel = ProtocolUtils.readVarInt(buf);
     }
 
+    // 25w14craftmine
+    if (version.noGreaterOrLessThan(ProtocolVersion.MINECRAFT_25w14CRAFTMINE)) {
+      this.isMap = buf.readBoolean();
+      this.unlockedEffects = ProtocolUtils.readVarIntArray(buf);
+      this.activeEffects = ProtocolUtils.readVarIntArray(buf);
+    }
+
     if (version.noLessThan(ProtocolVersion.MINECRAFT_1_20_5)) {
       this.enforcesSecureChat = buf.readBoolean();
     }
@@ -508,6 +518,13 @@ public class JoinGamePacket implements MinecraftPacket {
 
     if (version.noLessThan(ProtocolVersion.MINECRAFT_1_21_2)) {
       ProtocolUtils.writeVarInt(buf, seaLevel);
+    }
+
+    // 25w14craftmine
+    if (version.noGreaterOrLessThan(ProtocolVersion.MINECRAFT_25w14CRAFTMINE)) {
+      buf.writeBoolean(this.isMap);
+      ProtocolUtils.writeVarIntArray(buf, unlockedEffects);
+      ProtocolUtils.writeVarIntArray(buf, activeEffects);
     }
 
     if (version.noLessThan(ProtocolVersion.MINECRAFT_1_20_5)) {
