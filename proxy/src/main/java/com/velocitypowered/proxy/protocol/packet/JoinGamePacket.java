@@ -201,6 +201,14 @@ public class JoinGamePacket implements MinecraftPacket {
     this.enforcesSecureChat = enforcesSecureChat;
   }
 
+  public boolean isMap() {
+    return isMap;
+  }
+
+  public void setMap(boolean map) {
+    isMap = map;
+  }
+
   public CompoundBinaryTag getRegistry() {
     return registry;
   }
