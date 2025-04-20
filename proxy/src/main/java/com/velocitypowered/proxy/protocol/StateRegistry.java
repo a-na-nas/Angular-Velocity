@@ -226,13 +226,11 @@ public enum StateRegistry {
       clientbound.register(ActiveFeaturesPacket.class, ActiveFeaturesPacket::new,
           map(0x07, MINECRAFT_1_20_2, false),
           map(0x08, MINECRAFT_1_20_3, false),
-          map(0x0C, MINECRAFT_1_20_5, false),
-          map(0x0D, MINECRAFT_25w14CRAFTMINE, false));
+          map(0x0C, MINECRAFT_1_20_5, false));
       clientbound.register(TagsUpdatePacket.class, TagsUpdatePacket::new,
           map(0x08, MINECRAFT_1_20_2, false),
           map(0x09, MINECRAFT_1_20_3, false),
-          map(0x0D, MINECRAFT_1_20_5, false),
-          map(0x0E, MINECRAFT_25w14CRAFTMINE, false));
+          map(0x0D, MINECRAFT_1_20_5, false));
       clientbound.register(KnownPacksPacket.class, KnownPacksPacket::new,
           map(0x0E, MINECRAFT_1_20_5, false));
       clientbound.register(ClientboundCustomReportDetailsPacket.class, ClientboundCustomReportDetailsPacket::new,
@@ -259,7 +257,8 @@ public enum StateRegistry {
           map(0x09, MINECRAFT_1_19_4, false),
           map(0x0A, MINECRAFT_1_20_2, false),
           map(0x0B, MINECRAFT_1_20_5, false),
-          map(0x0D, MINECRAFT_1_21_2, false));
+          map(0x0D, MINECRAFT_1_21_2, false),
+          map(0x0E, MINECRAFT_25w14CRAFTMINE, false));
       serverbound.register(
           LegacyChatPacket.class,
           LegacyChatPacket::new,
@@ -307,7 +306,7 @@ public enum StateRegistry {
           map(0x09, MINECRAFT_1_20_2, false),
           map(0x0A, MINECRAFT_1_20_5, false),
           map(0x0C, MINECRAFT_1_21_2, false),
-          map(0x0D, MINECRAFT_1_21_2, false));
+          map(0x0D, MINECRAFT_25w14CRAFTMINE, false));
       serverbound.register(
           ServerboundCookieResponsePacket.class, ServerboundCookieResponsePacket::new,
           map(0x11, MINECRAFT_1_20_5, false),
@@ -374,7 +373,8 @@ public enum StateRegistry {
           FinishedUpdatePacket.class, () -> FinishedUpdatePacket.INSTANCE,
           map(0x0B, MINECRAFT_1_20_2, false),
           map(0x0C, MINECRAFT_1_20_5, false),
-          map(0x0E, MINECRAFT_1_21_2, false));
+          map(0x0E, MINECRAFT_1_21_2, false),
+          map(0x0F, MINECRAFT_25w14CRAFTMINE, false));
 
       clientbound.register(
           BossBarPacket.class,
@@ -665,7 +665,8 @@ public enum StateRegistry {
           map(0x32, MINECRAFT_1_16_2, false),
           map(0x36, MINECRAFT_1_17, false),
           map(0x34, MINECRAFT_1_19, false),
-          map(0x37, MINECRAFT_1_19_1, MINECRAFT_1_19_1, false),
+          map(0x37, MINECRAFT_1_19_1, false), // Valid for 1.19.1 and 1.19.2 only
+          map(0x34, MINECRAFT_1_19_3, false),
           map(0x38, MINECRAFT_25w14CRAFTMINE, false));
       clientbound.register(RemovePlayerInfoPacket.class, RemovePlayerInfoPacket::new,
           map(0x35, MINECRAFT_1_19_3, false),
