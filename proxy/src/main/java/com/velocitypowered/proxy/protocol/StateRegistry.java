@@ -279,7 +279,7 @@ public enum StateRegistry {
           map(0x0A, MINECRAFT_1_20_2, false),
           map(0x0B, MINECRAFT_1_20_5, false),
           map(0x0D, MINECRAFT_1_21_2, false),
-          map(0x0E, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mapping
+          map(0x0E, MINECRAFT_25w14CRAFTMINE, false),
           map(0x0E, MINECRAFT_1_21_6, false));
       serverbound.register(
           LegacyChatPacket.class,
@@ -332,7 +332,7 @@ public enum StateRegistry {
           map(0x09, MINECRAFT_1_20_2, false),
           map(0x0A, MINECRAFT_1_20_5, false),
           map(0x0C, MINECRAFT_1_21_2, false),
-          map(0x0D, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mapping
+          map(0x0D, MINECRAFT_25w14CRAFTMINE, false),
           map(0x0D, MINECRAFT_1_21_6, false));
       serverbound.register(
           ServerboundCookieResponsePacket.class, ServerboundCookieResponsePacket::new,
@@ -358,7 +358,7 @@ public enum StateRegistry {
           map(0x10, MINECRAFT_1_20_3, false),
           map(0x12, MINECRAFT_1_20_5, false),
           map(0x14, MINECRAFT_1_21_2, false),
-          map(0x15, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mappings
+          map(0x15, MINECRAFT_25w14CRAFTMINE, false),
           map(0x15, MINECRAFT_1_21_6, false));
       serverbound.register(
           KeepAlivePacket.class,
@@ -379,7 +379,7 @@ public enum StateRegistry {
           map(0x15, MINECRAFT_1_20_3, false),
           map(0x18, MINECRAFT_1_20_5, false),
           map(0x1A, MINECRAFT_1_21_2, false),
-          map(0x1B, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mappings
+          map(0x1B, MINECRAFT_25w14CRAFTMINE, false),
           map(0x1B, MINECRAFT_1_21_6, false));
       serverbound.register(
           ResourcePackResponsePacket.class,
@@ -405,7 +405,7 @@ public enum StateRegistry {
           map(0x0B, MINECRAFT_1_20_2, false),
           map(0x0C, MINECRAFT_1_20_5, false),
           map(0x0E, MINECRAFT_1_21_2, false),
-          map(0x0F, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mapping
+          map(0x0F, MINECRAFT_25w14CRAFTMINE, false),
           map(0x0F, MINECRAFT_1_21_6, false));
 
       clientbound.register(
@@ -577,7 +577,7 @@ public enum StateRegistry {
           map(0x47, MINECRAFT_1_20_5, true),
           map(0x4C, MINECRAFT_1_21_2, true),
           map(0x4B, MINECRAFT_1_21_5, true),
-          map(0x4C, MINECRAFT_25w14CRAFTMINE, true), // TODO: verify mapping
+          map(0x4C, MINECRAFT_25w14CRAFTMINE, true),
           map(0x50, MINECRAFT_1_21_9, true));
       clientbound.register(
           RemoveResourcePackPacket.class,
@@ -610,7 +610,7 @@ public enum StateRegistry {
           map(0x46, MINECRAFT_1_20_5, false),
           map(0x4B, MINECRAFT_1_21_2, false),
           map(0x4A, MINECRAFT_1_21_5, false),
-          map(0x4B, MINECRAFT_25w14CRAFTMINE, false), // TODO: verify mapping
+          map(0x4B, MINECRAFT_25w14CRAFTMINE, false),
           map(0x4F, MINECRAFT_1_21_9, false));
       clientbound.register(
           HeaderAndFooterPacket.class,
@@ -635,7 +635,7 @@ public enum StateRegistry {
           map(0x6D, MINECRAFT_1_20_5, true),
           map(0x74, MINECRAFT_1_21_2, true),
           map(0x73, MINECRAFT_1_21_5, true),
-          map(0x76, MINECRAFT_25w14CRAFTMINE, true), // TODO: verify mapping
+          map(0x76, MINECRAFT_25w14CRAFTMINE, true),
           map(0x78, MINECRAFT_1_21_9, true));
       clientbound.register(
           LegacyTitlePacket.class,
@@ -659,7 +659,7 @@ public enum StateRegistry {
           map(0x63, MINECRAFT_1_20_5, true),
           map(0x6A, MINECRAFT_1_21_2, true),
           map(0x69, MINECRAFT_1_21_5, true),
-          map(0x6B, MINECRAFT_25w14CRAFTMINE, true), // TODO: verify mapping
+          map(0x6B, MINECRAFT_25w14CRAFTMINE, true),
           map(0x6E, MINECRAFT_1_21_9, true));
       clientbound.register(
           TitleTextPacket.class,
@@ -674,7 +674,7 @@ public enum StateRegistry {
           map(0x65, MINECRAFT_1_20_5, true),
           map(0x6C, MINECRAFT_1_21_2, true),
           map(0x6B, MINECRAFT_1_21_5, true),
-          map(0x6D, MINECRAFT_25w14CRAFTMINE, true), // TODO: verify mapping
+          map(0x6D, MINECRAFT_25w14CRAFTMINE, true),
           map(0x70, MINECRAFT_1_21_9, true));
       clientbound.register(
           TitleActionbarPacket.class,
