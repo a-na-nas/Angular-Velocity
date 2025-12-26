@@ -10,7 +10,7 @@ plugins {
 
 application {
     mainClass.set("com.velocitypowered.proxy.Velocity")
-    applicationDefaultJvmArgs += listOf("-Dvelocity.packet-decode-logging=true");
+    applicationDefaultJvmArgs += listOf("-Dvelocity.packet-decode-logging=true")
 }
 
 tasks {
@@ -20,7 +20,7 @@ tasks {
 
     jar {
         manifest {
-            attributes["Implementation-Title"] = "Velocity"
+            attributes["Implementation-Title"] = "Angular Velocity"
             attributes["Implementation-Vendor"] = "Velocity Contributors"
             attributes["Multi-Release"] = "true"
         }
