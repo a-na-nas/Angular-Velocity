@@ -1,17 +1,13 @@
-# Snapshot-patched Velocity
+# Angular Velocity
 
 Fork of Velocity with added 25w14craftmine April Fools snapshot support.
-This patched version does not provide any packet conversion for connections
-(for that please take a look at [ViaAprilFools](https://hangar.papermc.io/ViaVersion/ViaAprilFools) -
-a ViaVersion extension for handling notable snapshot versions), but it allows
-connections between 25w14craftmine clients and servers within your network.
-
-## Velocity
-
-A Minecraft server proxy with unparalleled server support, scalability,
-and flexibility.
-
-Velocity is licensed under the GPLv3 license.
+This patched version does not provide any packet conversion for connections, 
+but it allows connections between 25w14craftmine clients and 25w14craftmine servers
+within your network, if present.
+For package-conversion functionality, to provide a seemless switching experience between
+snapshot and non-snapshot servers in your network, please take a look at 
+[ViaAprilFools](https://hangar.papermc.io/ViaVersion/ViaAprilFools) project -
+a ViaVersion extension for handling notable snapshot versions).
 
 ## Goals
 
